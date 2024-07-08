@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/eventList">
+
+    <fragment
+        android:id="@+id/eventList"
+        android:name="com.example.campusconnect10.FragmentEventList"
+        android:label="fragment_event_list"
+        tools:layout="@layout/fragment_event_list" >
+        <action
+            android:id="@+id/action_eventList_to_eventDetails"
+            app:destination="@id/eventDetails" />
+        <action
+            android:id="@+id/action_eventList_to_userPage"
+            app:destination="@id/userPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetails"
+        android:name="com.example.campusconnect10.EventDetails"
+        android:label="fragment_event_details"
+        tools:layout="@layout/fragment_event_details" />
+    <activity
+        android:id="@+id/userPage"
+        android:name="com.example.campusconnect10.UserPage"
+        android:label="activity_user_page"
+        tools:layout="@layout/activity_user_page" />
+</navigation>
